@@ -8,7 +8,8 @@ function canEdit(user, featureGeo) {
     var fsIntersectedBoundaries = Intersects(fsBoundary, featureGeo )
     //if no boundary error
     if (Count(fsIntersectedBoundaries) == 0)
-    return {"errorMessage": "Features must be created within a boundary"} 
+    return {"errorMessage": "Features must be created within a boundary"
+            "success": false};
     
     //we are interested in the first boundary
     //we can enhnace the script to look for all boundaries
